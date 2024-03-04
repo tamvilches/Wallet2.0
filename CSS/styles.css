@@ -1,0 +1,126 @@
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    
+  }
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #333;
+    
+}
+/** Fondo de encabezado **/
+header {
+    padding: 0px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/** Logo del header **/
+#imgWallet {
+    border-radius: 10%; /* Asegúrate de que el valor sea la mitad del ancho o alto de tu imagen */
+    max-width: 50%; /* Para asegurarse de que el logo no sea más grande que su contenedor */
+    margin-bottom: 20px;
+    
+}
+form{
+    background-color: rgba(245, 239, 250, 0.2); /* Color violeta con 70% de transparencia */
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+    
+}
+
+.btnForm button{
+    margin: 0 10px;
+    border: #fff solid 1.5px;
+}
+.btnCard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block
+}
+.foot{
+    background-color: hsl(240, 100%, 50%, 0.3);
+    margin-top: 15px;
+    padding: 12px;
+}
+
+input{
+        width: 100%; /* Hace que los inputs ocupen todo el ancho del contenedor */
+    max-width: 100%; /* Establece un ancho máximo para los inputs */ 
+}
+.container{
+    background-image: url(../img/celestedegradado.jpg);    
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+.animationContainer {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-bottom: 1px;
+}
