@@ -6,7 +6,8 @@
 @media (min-width: 1281px) {
   
     /* CSS */
-    
+    /*Menu.html*/
+
   }
   
   /* 
@@ -63,64 +64,179 @@
     /* CSS */
     
   }
-body{
+
+
+body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #333;
-    
 }
-/** Fondo de encabezado **/
 header {
-    padding: 0px;
-    margin: 10px;
-    border-radius: 10px;
+  height: 10vh; /* altura relativa al contenedor padre */
+}
+main {
+  display: flex; /* Usa flexbox para alinear el contenido */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: calc(100vh - 20px); /* Establece la altura al 100% del viewport menos 20px */
+  padding-bottom: 20px; /* Agrega un padding inferior */
 }
 
-/** Logo del header **/
-#imgWallet {
-    border-radius: 10%; /* Asegúrate de que el valor sea la mitad del ancho o alto de tu imagen */
-    max-width: 50%; /* Para asegurarse de que el logo no sea más grande que su contenedor */
-    margin-bottom: 20px;
-    
-}
-form{
-    background-color: rgba(245, 239, 250, 0.2); /* Color violeta con 70% de transparencia */
-    border-radius: 10px;
-    border: 1px solid;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
-    text-align: center; /* Centra el texto horizontalmente */
-    
+  /*Login.html*/
+#contenedorLogin {
+  max-width: 400px; /* Establece un ancho máximo para el contenedor */
+  width: 90%;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin-top: 50px; /* Añade un margen superior */
+  background-color: #fff; /* Agrega un fondo blanco al contenedor */
+  padding: 20px; /* Agrega espacio interno al contenedor */
+  border-radius: 10px; /* Agrega bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+
 }
 
-.btnForm button{
-    margin: 0 10px;
-    border: #fff solid 1.5px;
+/*MEnu.html */
+#contenedorMenu {
+  max-width: 600px; /* Establece un ancho máximo */
+  width: 90%; /* Establece un ancho del 90% del contenedor padre */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 20px; /* Agrega espacio interno al contenedor */
+  border-radius: 10px; /* Agrega bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+  min-height:55vh;
+  overflow: hidden;;
+  margin-bottom: 10px;
 }
-.btnCard{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: block
+#formMenu {
+  text-align: center; /* Centra el contenido del formulario */
 }
-.foot{
-    background-color: hsl(240, 100%, 50%, 0.3);
-    margin-top: 15px;
-    padding: 12px;
+#divSaldo {
+  position: relative; /* Establece la posición relativa para que los elementos internos puedan posicionarse con respecto a este */
+  background-image: url('../img/fondoDegradeCirculo.png'); /* Especifica la ruta de tu imagen como fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen dentro del contenedor */
+  padding: 30px; /* Añade un relleno alrededor del texto */
+  color: white; /* Cambia el color del texto a blanco */
+  font-weight: bold; /* Hace que el texto sea negrita */
+  border-radius: 10px;
+}
+#btnGroupMenu {
+  margin-top: 20px; /* Añade un margen superior */
+  margin-bottom: 10px; /* Reducir el margen inferior */
+  }
+#btnDeposit, #btnEnviarDinero, #btnMov {
+  background-color: #ffffff; /* Cambia el color de fondo */
+  color: #00a2ff; /* Cambia el color del texto */
+  border-color: #00a2ff;
+  border-radius: 8px; /* Ajusta el radio de los bordes */
+  padding: 10px 20px; /* Ajusta el relleno */
+}
+#btnDeposit:hover,#btnEnviarDinero:hover, #btnMov:hover {
+  /* Estilos al pasar el ratón por encima */
+  background-color: #00a2ff; /* Cambia el color de fondo al pasar el ratón */
+  color: #ffffff; /* Cambia el color del texto al pasar el ratón */
 }
 
-input{
-        width: 100%; /* Hace que los inputs ocupen todo el ancho del contenedor */
-    max-width: 100%; /* Establece un ancho máximo para los inputs */ 
+
+/*Deposit.html*/
+#contenedorDeposit {
+  max-width: 600px; /* Establece un ancho máximo */
+  width: 90%; /* Establece un ancho del 90% del contenedor padre */
+  margin: 0 auto ; /* Centra el contenedor horizontalmente */
+  padding: 20px; /* Agrega espacio interno al contenedor */
+  border-radius: 10px; /* Agrega bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+  min-height:10vh;
+  overflow: hidden;;
+  margin-bottom: 10px;
 }
-.container{
-    background-image: url(../img/celestedegradado.jpg);    
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+#bannerSaldoDeposit {
+  position: relative; /* Establece la posición relativa para que los elementos internos puedan posicionarse con respecto a este */
+  background-image: url('../img/fondoDegradeCirculo.png'); /* Especifica la ruta de tu imagen como fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen dentro del contenedor */
+  padding: 10px; /* Añade un relleno alrededor del texto */
+  color: white; /* Cambia el color del texto a blanco */
+  font-weight: bold; /* Hace que el texto sea negrita */
+  border-radius: 10px;
 }
-.animationContainer {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    margin-bottom: 1px;
+#tituloDeposito {
+  font-size: 20px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  color: #333; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+#btnMontoDeposit,
+#goToMenu {
+  background-color: #ffffff; /* Cambia el color de fondo */
+  color: #00a2ff; /* Cambia el color del texto */
+  border-color: #00a2ff;
+  border-radius: 8px; /* Ajusta el radio de los bordes */
+  padding: 10px 20px; /* Ajusta el relleno */
+  margin-right: 10px; /* Espaciado entre los botones */
+}
+
+#btnMontoDeposit:hover,
+#goToMenu:hover {
+  /* Estilos al pasar el ratón por encima */
+  background-color: #00a2ff; /* Cambia el color de fondo al pasar el ratón */
+  color: #ffffff; /* Cambia el color del texto al pasar el ratón */
+}
+
+
+/*Sendmoney.html*/
+#contenedorSendMoney {
+  max-width: 600px; /* Establece un ancho máximo */
+  width: 90%; /* Establece un ancho del 90% del contenedor padre */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 20px; /* Agrega espacio interno al contenedor */
+  border-radius: 10px; /* Agrega bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+}
+/* Estilos para el formulario */
+#formSendMoney {
+  text-align: center; /* Centra el contenido del formulario */
+}
+
+/*contenedor de botones */
+.d-flex.justify-content-center.mt-3 {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+/*botones */
+#btnTransferir,
+#btnAgregarContacto {
+  background-color: #ffffff; /* Cambia el color de fondo */
+  color: #00a2ff; /* Cambia el color del texto */
+  border-color: #00a2ff;
+  border-radius: 8px; /* Ajusta el radio de los bordes */
+  padding: 10px 20px; /* Ajusta el relleno */
+}
+#btnTransferir:hover,
+#btnAgregarContacto:hover {
+  background-color: #00a2ff; /* Cambia el color de fondo al pasar el ratón */
+  color: #ffffff; /* Cambia el color del texto al pasar el ratón */
+}
+#divSaldoDeposit {
+  position: relative; /* Establece la posición relativa para que los elementos internos puedan posicionarse con respecto a este */
+  background-image: url('../img/fondoDegradeCirculo.png'); /* Especifica la ruta de tu imagen como fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen dentro del contenedor */
+  padding: 10px; /* Añade un relleno alrededor del texto */
+  color: white; /* Cambia el color del texto a blanco */
+  font-weight: bold; /* Hace que el texto sea negrita */
+  border-radius: 10px;
+}
+
+
+/*Transactions.html*/
+
+#filtroSelect {
+  position: relative; /* Establece la posición relativa para que los elementos internos puedan posicionarse con respecto a este */
+  background-image: url('../img/fondoDegradeCirculo.png'); /* Especifica la ruta de tu imagen como fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen dentro del contenedor */
+  padding: 10px; /* Añade un relleno alrededor del texto */
+  color: white; /* Cambia el color del texto a blanco */
+  font-weight: bold; /* Hace que el texto sea negrita */
+  border-radius: 10px;
 }
