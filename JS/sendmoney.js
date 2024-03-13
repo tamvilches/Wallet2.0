@@ -200,8 +200,8 @@ $(document).ready(function() {
             Swal.fire({
                 title: 'Transferencia AlkeWallet',
                 html:
-                    `<p>A quién estás transfiriendo:</p>
-                    <p>${contactoSeleccionado}</p>
+                    `<p>Estás transfiriendo a:<strong> ${contactoSeleccionado}</strong></p>
+                    <hr>
                     <p>${contactoSeleccionadoDetails}</p>
                     <input id="montoTransferencia" class="swal2-input" placeholder="Monto a transferir">`,
                 showCancelButton: true,
@@ -259,13 +259,35 @@ $(document).ready(function() {
         }
     });
 
-    // Función para borrar los registros del localStorage
-    $("#btnBorrarRegistros").click(function() {
-        localStorage.removeItem('contactos');
-        cargarContactos(); // Recargar la lista para reflejar los cambios
-        alert("Los registros se han eliminado correctamente.");
-    });
 
     // Cargar los contactos al cargar la página
     cargarContactos();
+});
+
+$(document).ready(function() {
+    // Agregar evento click al botón "Ir al menú principal"
+    $("#goToMenu").click(function() {
+        // Mostrar la alerta emergente con el mismo formato que las otras alertas
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+        });
+
+        Toast.fire({
+            icon: "success", // Especificar el tipo de icono como éxito
+            title: "Redirigiendo al menú principal..."
+        });
+
+        // Redirigir al usuario a menu.html después de 3 segundos
+        setTimeout(function() {
+            window.location.href = "menu.html";
+        }, 3000);
+    });
 });

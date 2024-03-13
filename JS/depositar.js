@@ -8,7 +8,7 @@ $(document).ready(function() {
     // Obtener el saldo del localStorage al cargar la página con jQuery
     let saldo = parseFloat(localStorage.getItem('saldo')) || 0;
     const saldoElement = $("#saldo");
-    saldoElement.text("Saldo Actual: $" + saldo.toFixed(2));
+    saldoElement.text("Saldo: $" + saldo.toFixed(2));
 
     const btnDeposit = $("#btnMontoDeposit"); // Obtener el botón de depósito
 
@@ -50,7 +50,8 @@ $(document).ready(function() {
             icon: "success",
             title: "Acabas de depositar: $" + montoDeposit + " en tu AlkeWallet",
             showConfirmButton: false,
-            timer: 2000
+            timer: 2000,
+            footer: '<p id="saldo" style="font-weight: bold; font-size: 14px;" class="text-center">Nuevo Saldo: $' + saldo.toFixed(2) + '</p>'
         }).then(() => {
             setTimeout(function() {
                 window.location.href = "menu.html"; 
@@ -59,11 +60,35 @@ $(document).ready(function() {
         
     });
 
-   
-
-    // Agregar evento click al botón "Ir al menú principal"
-    $(".btn-secondary").on("click", function(event) {
-        event.preventDefault();
-        window.location.href = "menu.html";
+    $(document).ready(function() {
+        // Agregar evento click al botón "Ir al menú principal"
+        $("#goToMenu").click(function() {
+            // Mostrar la alerta emergente con el mismo formato que las otras alertas
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+    
+            Toast.fire({
+                icon: "success",
+                title: "Redirigiendo al menú principal..."
+            });
+    
+            // Redirigir al usuario a menu.html después de 3 segundos
+            setTimeout(function() {
+                window.location.href = "menu.html";
+            }, 3000);
+        });
     });
+    
+       
+
+
 });

@@ -10,7 +10,7 @@ function verificarCredenciales() {
     var password = $('#password').val();
 
     // Validación email y contraseña
-    if (email === "aast@gmail.com" && password === "123") {
+    if (email === "tivs@gmail.com" && password === "123") {
         // salta el mensaje de exito con sweetAlert
         Swal.fire({
             icon: 'success',
