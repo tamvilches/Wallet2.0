@@ -45,6 +45,7 @@ function cargarHistorialDepositos() {
 document.addEventListener('DOMContentLoaded', function() {
     cargarHistorialTransferencias();
     cargarHistorialDepositos();
+
 });
 
 ////////////////////////////////////////////////////
@@ -98,15 +99,38 @@ function cargarHistorialMovimientos() {
 }
 
 
-// Llamar a la función para cargar y mostrar el historial de movimientos cuando la página se cargue
-$(document).ready(function() {
-    cargarHistorialMovimientos();
-});
-
 // Agregar evento de cambio al select para filtrar los movimientos
 $('#filtroMovimientos').on('change', function() {
     cargarHistorialMovimientos(); // Llamar a la función para cargar los movimientos filtrados
 });
 
+// Llamar a la función para cargar y mostrar el historial de movimientos cuando la página se cargue
+$(document).ready(function() {
+    cargarHistorialMovimientos();
+    
+});
 
 
+// Agregar evento click al botón "Ir al menú principal"
+$('#goToMenu').on('click', function() {
+    // Mostrar el Toast de SweetAlert2
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+        }
+    });
+
+    Toast.fire({
+        icon: "success",
+        title: "Redirigiendo al menú principal..."
+    }).then((result) => {
+        // Redirigir al usuario a menu.html después de cerrar la alerta
+        window.location.href = "menu.html";
+    });
+});

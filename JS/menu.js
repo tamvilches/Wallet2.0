@@ -47,7 +47,7 @@ botonEnviar.addEventListener("click", function(event) {
         });  
         Toast.fire({
             icon: "success",
-            title: "Serás redirigido a tus contactos...!"
+            title: "Podrás transferir a tus contactos ...!"
         });
         // Redirigir post alerta
         setTimeout(function() {
